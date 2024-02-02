@@ -9,7 +9,7 @@ import { Search, Trash, Undo } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
-import { ConfirmModal } from "./modals/comfirm-modal";
+import { ConfirmModal } from "../../../components/modals/comfirm-modal";
 
 export const TrashBox = () => {
     const router = useRouter();
@@ -91,7 +91,7 @@ export const TrashBox = () => {
                             <div
                                 onClick={(e) => onRestore(e, document._id)}
                                 role="button"
-                                className="rounded-sm p-2 hover:bg-neutral-200"
+                                className="rounded-sm p-2 hover:bg-neutral-200 dark:hover:bg-neutral-600"
                             >
                                 <Undo className="h-4 w-4 text-muted-foreground" />
                             </div>
@@ -100,7 +100,7 @@ export const TrashBox = () => {
                             >
                                 <div
                                     role="button"
-                                    className="rounded-sm p-2 hover:bg-neutral-200"
+                                    className="rounded-sm p-2 hover:bg-neutral-200 dark:hover:bg-neutral-600"
                                 >
                                     <Trash className="h-4 w-4 text-muted-foreground" />
                                 </div>
